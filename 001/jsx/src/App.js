@@ -1,14 +1,20 @@
 function App() {
 
-  const time = new Date();
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const date = today.getDate();
+  const hours = today.getHours();
+  const minutes = today.getMinutes();
+  const seconds = today.getSeconds();
 
 
   return (
     <div>
       <div style={{backgroundColor: 'pink', color: 'green', fontSize:'24px', fontWeight: 'bold'}}>
-        <p>년: {time.getFullYear()}</p>
-        <p>월/일: {time.getMonth() + 1}/{time.getDate()}</p>
-        <p>시간: {time.getHours()}시 {time.getMinutes()}분 {time.getSeconds()}초</p>
+        <p>년: {year}</p>
+        <p>월/일: {month}/{date}</p>
+        <p>시간: {hours}시 {minutes}분 {seconds}초</p>
       </div>
     </div>
   );
